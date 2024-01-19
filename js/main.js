@@ -13,12 +13,14 @@ $(function(){
       headercontEl.classList.remove("header_content--big")
     }
   });
+});
 
+$(function() {
   $(".logo, .menu a, .header__link").on("click", function (event) {
-		event.preventDefault();
-		var id  = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 1500);
+	event.preventDefault();
+	var id  = $(this).attr('href'),
+		top = $(id).offset().top;
+	$('body,html').animate({scrollTop: top}, 1500);
 	});
   
   $('.burger-btn, .menu a').on('click', function(){
@@ -27,5 +29,7 @@ $(function(){
   });
 
   var mixer = mixitup('.works__content');
-});
+})
+
+
 
